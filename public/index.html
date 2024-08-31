@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><!-- _  
+  
+
+ /$$   /$$                     /$$                                        
+| $$  | $$                    |__/                                        
+| $$  | $$  /$$$$$$   /$$$$$$  /$$ /$$$$$$$$ /$$   /$$  /$$$$$$  /$$$$$$$ 
+| $$$$$$$$ /$$__  $$ /$$__  $$| $$|____ /$$/|  $$ /$$/ /$$__  $$| $$__  $$
+| $$__  $$| $$  \ $$| $$  \__/| $$   /$$$$/  \  $$$$/ | $$  \ $$| $$  \ $$
+| $$  | $$| $$  | $$| $$      | $$  /$$__/    >$$  $$ | $$  | $$| $$  | $$
+| $$  | $$|  $$$$$$/| $$      | $$ /$$$$$$$$ /$$/\  $$|  $$$$$$/| $$  | $$
+|__/  |__/ \______/ |__/      |__/|________/|__/  \__/ \______/ |__/  |__/
+                                                                          
+                                                                          
+                                                                          
+       /$$       /$$               /$$   /$$                     /$$      
+      | $$      |__/              |__/  | $$                    | $$      
+      | $$       /$$ /$$$$$$/$$$$  /$$ /$$$$$$    /$$$$$$   /$$$$$$$      
+      | $$      | $$| $$_  $$_  $$| $$|_  $$_/   /$$__  $$ /$$__  $$      
+      | $$      | $$| $$ \ $$ \ $$| $$  | $$    | $$$$$$$$| $$  | $$      
+      | $$      | $$| $$ | $$ | $$| $$  | $$ /$$| $$_____/| $$  | $$      
+      | $$$$$$$$| $$| $$ | $$ | $$| $$  |  $$$$/|  $$$$$$$|  $$$$$$$      
+      |________/|__/|__/ |__/ |__/|__/   \___/   \_______/ \_______/         
+    
+--><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizxon Lavalink Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn.hengnation.dev/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-mode"> <!-- Default to dark mode -->
+    <div class="switch-container">
+        <button id="themeSwitch" aria-label="Switch to light mode">
+            <img id="moonIcon" src="https://cdn.hengnation.dev/9B.png" alt="Sun Icon">
+            <img id="sunIcon" src="https://cdn.hengnation.dev/moon.png" alt="Moon Icon" style="display: none;">
+        </button>
+    </div>
+    <div class="container">
+        <header>
+            <img src="https://cdn.hengnation.dev/jw.png" alt="Horizxon Logo" class="logo">
+            <div class="header-content">
+                <h1>Horizxon Limited</h1>
+                <p class="subtitle">Lavalink Monitoring & Status: Real-Time Analytics and Performance Insights</p>
+            </div>
+        </header>
+        <div id="v4Stats" class="card">
+            <h2>Lavalink v4</h2>
+            <p id="v4Status">Loading...</p>
+            <p id="v4Players">Players: N/A</p>
+            <p id="v4PlayingPlayers">Playing Players: N/A</p>
+            <p id="v4Uptime">Uptime: N/A</p>
+            <p id="v4Memory">Memory: Free - N/A, Used - N/A</p>
+            <p id="v4Cpu">CPU: Cores - N/A, System Load - N/A, Lavalink Load - N/A</p>
+        </div>
+        <div id="v3Stats" class="card">
+            <h2>Lavalink v3</h2>
+            <p id="v3Status">Loading...</p>
+            <p id="v3Players">Players: N/A</p>
+            <p id="v3PlayingPlayers">Playing Players: N/A</p>
+            <p id="v3Uptime">Uptime: N/A</p>
+            <p id="v3Memory">Memory: Free - N/A, Used - N/A</p>
+            <p id="v3Cpu">CPU: Cores - N/A, System Load - N/A, Lavalink Load - N/A</p>
+        </div>
+
+        <!-- Lavalink Routes Section -->
+        <div class="routes-section">
+            <h2>REST API Routes</h2>
+            <div class="routes">
+                <div class="routes-column">
+                    <h3>Lavalink v4</h3>
+                    <div class="route-item">
+                        <p>API Link:</p>
+                        <a href="https://api.lavalink.rocks/v4" target="_blank" rel="noopener noreferrer">https://api.lavalink.rocks/v4</a>
+                    </div>
+                    <div class="route-item">
+                        <p>Connections Badge:</p>
+                        <a href="https://api.lavalink.rocks/v4/badge/connections" target="_blank" rel="noopener noreferrer">https://api.lavalink.rocks/v4/badge/connections</a>
+                    </div>
+                </div>
+                <div class="routes-column">
+                    <h3>Lavalink v3</h3>
+                    <div class="route-item">
+                        <p>API Link:</p>
+                        <a href="https://api.lavalink.rocks/v3" target="_blank" rel="noopener noreferrer">https://api.lavalink.rocks/v3</a>
+                    </div>
+                    <div class="route-item">
+                        <p>Connections Badge:</p>
+                        <a href="https://api.lavalink.rocks/v3/badge/connections" target="_blank" rel="noopener noreferrer">https://api.lavalink.rocks/v3/badge/connections</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lavalink Configuration Section -->
+        <div class="config-section">
+            <h2>Lavalink Configuration</h2>
+            <div class="config">
+                <div class="config-column">
+                    <h3>With SSL</h3>
+                    <pre><code>➥𝗟𝗔𝗩𝗔𝗟𝗜𝗡𝗞_𝗩𝟰:
+HOST: v4.lavalink.rocks
+PASSWORD: horizxon.tech
+PORT: 443
+SECURE: true
+
+➥𝗟𝗔𝗩𝗔𝗟𝗜𝗡𝗞_𝗩𝟯:
+HOST: v3.lavalink.rocks
+PASSWORD: horizxon.tech
+PORT: 443
+SECURE: true</code></pre>
+                </div>
+                <div class="config-column">
+                    <h3>Without SSL</h3>
+                    <pre><code>𝗟𝗔𝗩𝗔𝗟𝗜𝗡𝗞_𝗩𝟰:
+HOST: v4.lavalink.rocks
+PASSWORD: horizxon.tech
+PORT: 80
+SECURE: false
+
+➥𝗟𝗔𝗩𝗔𝗟𝗜𝗡𝗞_𝗩𝟯:
+HOST: v3.lavalink.rocks
+PASSWORD: horizxon.tech
+PORT: 80
+SECURE: false</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© <a href="https://horizxon.tech" target="_blank" rel="noopener noreferrer">2024 Horizxon Limited</a> All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

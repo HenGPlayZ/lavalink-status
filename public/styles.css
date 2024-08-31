@@ -1,0 +1,308 @@
+/* General Styles */
+body {
+    font-family: 'Space Mono', monospace; /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #121212, #1e1e1e); /* Gradient background */
+    color: #e0e0e0;
+    transition: background 0.3s, color 0.3s; /* Smooth transition for dark/light mode */
+}
+
+body.light-mode {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Light mode gradient */
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow for card */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+body.light-mode .card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Lighter shadow in light mode */
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Elevated shadow on hover */
+    transform: translateY(-5px); /* Lift card effect on hover */
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 28px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    color: #f0f0f0; /* Dark mode color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+body.light-mode .card h2 {
+    color: #000000; /* Light mode color */
+}
+
+/* Config Section Styles */
+.config-section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for section */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+body.light-mode .config-section {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.config h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+body.light-mode .config h2 {
+    color: #000000;
+}
+
+.config {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.config-column {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 300px;
+}
+
+/* Preformatted Text Styles */
+pre {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    padding: 15px;
+    color: #d4d4d4;
+    border: 1px solid #333;
+    overflow: auto;
+    white-space: pre-wrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode pre {
+    background-color: #f5f5f5;
+    color: #000000;
+    border: 1px solid #ddd;
+}
+
+pre:hover {
+    border-color: #1e90ff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #1e1e1e, #2c2c2c); /* Gradient background */
+    color: #e0e0e0;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for header */
+}
+
+body.light-mode header {
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1e1e1e, #2c2c2c); /* Gradient background */
+    color: #e0e0e0;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Shadow for footer */
+}
+
+body.light-mode footer {
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    color: #000000;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+body.light-mode footer a {
+    color: #000000;
+}
+
+footer a:hover {
+    color: #d0d0d0;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Theme Switch Button */
+.switch-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#themeSwitch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#themeSwitch:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+#moonIcon, #sunIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#moonIcon {
+    display: block;
+}
+
+#sunIcon {
+    display: none;
+}
+
+/* Routes Section Styles */
+.routes-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for section */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.light-mode .routes-section {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.routes-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    gap: 20px; /* Space between columns */
+}
+
+.routes-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.routes-column h3 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    color: #ffffff; /* Ensures same color in both modes */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+body.light-mode .routes-column h3 {
+    color: #000000; /* Light mode color */
+}
+
+.route-item {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.route-item p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff; /* Ensures same color in both modes */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+body.light-mode .route-item p {
+    color: #000000; /* Light mode color */
+}
+
+.route-item a {
+    color: #1e90ff;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    display: inline-block;
+    max-width: 100%;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.route-item a:hover {
+    color: #d0d0d0;
+    text-decoration: underline;
+}
+
+/* Ensure the links use the same color in both modes */
+body.light-mode .route-item a {
+    color: #000000;
+}
