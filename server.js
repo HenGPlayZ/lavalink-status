@@ -70,9 +70,8 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       'https://status.lavalink.rocks',  // Existing domain
-      'https://api.lavalink.rocks',  
-      'https://status.lavalink.rocks', // Add more domains here
-      'http://node.hengnation.eu:25566'     // Add additional domains as needed
+      'https://api.lavalink.rocks' 
+     // Add additional domains as needed
     ];
 
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
