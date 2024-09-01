@@ -5,20 +5,22 @@
 
 This repository contains a custom Lavalink REST API server and a web interface to monitor Lavalink statistics. The API and the website are powered by Node.js, Express, and a simple frontend in the `public` folder.
 
+
+
 ## Notes
 
-- **User Friendliness**: Please note that this code is not particularly user-friendly and may be a bit messy. It's tailored to specific use cases and might require some tweaks depending on your environment and needs.
+- **User Friendliness**: This code is tailored to specific needs, so it may be a bit messy and not very user-friendly. It might require tweaks based on your environment.
   
-- **Personal Use**: I created this project for my specific use only. It's not particularly good, and it's not intended for general use. Please be aware that I'm just a beginner, so the code might not be up to professional standards.
+- **Personal Use**: I created this project for my own use and didn't plan to make it public. As a result, it’s a bit messy and not designed to be easily modified. I apologize for any inconvenience—I'm just a beginner.
 
-- **Configuration**: The Lavalink API settings and other configurations are centralized in the `config.js` file, making it easier to add or modify Lavalink instances.
+- **Configuration**: Lavalink API settings are centralized in `config.js` for easy modification or addition of instances.
 
 ## Features
 
-- **Lavalink API Integration**: Provides RESTful API endpoints for interacting with multiple Lavalink instances.
-- **Web Interface**: A simple frontend to monitor Lavalink stats like CPU usage, memory usage, players, and more.
-- **Lavalink Players Badge**: Displays a badge on the web interface showing the number of active Lavalink players. The badge can be accessed at `http://localhost:3000/version/badge/connections`.
-- **Real-Time Updates**: Dynamic updates to the web interface using JavaScript.
+- **Lavalink API Integration**: RESTful API endpoints for interacting with multiple Lavalink instances.
+- **Web Interface**: Simple frontend for monitoring Lavalink stats like CPU usage, memory, and players.
+- **Lavalink Players Badge**: Displays active player count at `http://localhost:3000/version/badge/connections`.
+- **Real-Time Updates**: Dynamic web interface updates via JavaScript.
 
 ## Getting Started
 
