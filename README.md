@@ -33,7 +33,7 @@ This repository contains a custom Lavalink REST API server and a web interface t
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/HenGPlayZ/lavalink-status
-   cd Lavalink-API
+   cd lavalink-status
    ```
 
 2. **Install dependencies**:
