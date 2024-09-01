@@ -8,7 +8,7 @@ module.exports = {
       HOST: "https://v4.lavalink.rocks/v4",
       PASSWORD: "horizxon.tech",
     },
-    PORT: 25566,
+    PORT: 3000,
     API_TIMEOUT: 50000,
   };
   
