@@ -61,7 +61,7 @@ Contributions are welcome! Feel free to submit a pull request or open an issue t
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the GNU-v3 License. See the [LICENSE](LICENSE) file for more details.
 ---
 
 <p align="center">Made with ❤️ by HenGPlayZ (Draxler)</p>
