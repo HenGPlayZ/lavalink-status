@@ -1,7 +1,7 @@
 
 ---
 
-# Lavalink-API
+# Lavalink-Status
 
 This repository contains a custom Lavalink REST API server and a web interface to monitor Lavalink statistics. The API and the website are powered by Node.js, Express, and a simple frontend in the `public` folder.
 
@@ -22,7 +22,7 @@ This repository contains a custom Lavalink REST API server and a web interface t
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/HenGPlayZ/Lavalink-API
+   git clone https://github.com/HenGPlayZ/lavalink-status
    cd Lavalink-API
    ```
 
