@@ -10,7 +10,7 @@ This repository contains a custom Lavalink REST API server and a web interface t
 - **Lavalink API Integration**: Provides RESTful API endpoints for interacting with multiple Lavalink instances.
 - **Web Interface**: A simple frontend to monitor Lavalink stats like CPU usage, memory usage, players, and more.
 - **Lavalink Players Badge**: Displays a badge on the web interface showing the number of active Lavalink players. The badge can be accessed at `http://localhost:3000/version/badge/connections`.
-- **Real-Time Updates**: Dynamic updates to the web interface using JavaScript and Chart.js.
+- **Real-Time Updates**: Dynamic updates to the web interface using JavaScript.
 
 ## Getting Started
 
