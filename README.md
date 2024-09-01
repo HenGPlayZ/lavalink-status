@@ -40,6 +40,13 @@ This repository contains a custom Lavalink REST API server and a web interface t
 
 Once the server is running, you can access the web interface by navigating to `http://localhost:3000` (or the port you have configured) in your web browser.
 
+## Preview
+- Web Interface: https://status.lavalink.rocks
+- https://api.lavalink.rocks/v4
+- https://api.lavalink.rocks/v3
+![V4 Badge](https://api.lavalink.rocks/v4/badge/connections)
+![V3 Badge](https://api.lavalink.rocks/v3/badge/connections)
+
 ## Notes
 
 - **User Friendliness**: Please note that this code is not particularly user-friendly and may be a bit messy. It's tailored to specific use cases and might require some tweaks depending on your environment and needs.
