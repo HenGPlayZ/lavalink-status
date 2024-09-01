@@ -5,6 +5,14 @@
 
 This repository contains a custom Lavalink REST API server and a web interface to monitor Lavalink statistics. The API and the website are powered by Node.js, Express, and a simple frontend in the `public` folder.
 
+## Notes
+
+- **User Friendliness**: Please note that this code is not particularly user-friendly and may be a bit messy. It's tailored to specific use cases and might require some tweaks depending on your environment and needs.
+  
+- **Personal Use**: I created this project for my specific use only. It's not particularly good, and it's not intended for general use. Please be aware that I'm just a beginner, so the code might not be up to professional standards.
+
+- **Configuration**: The Lavalink API settings and other configurations are centralized in the `config.js` file, making it easier to add or modify Lavalink instances.
+
 ## Features
 
 - **Lavalink API Integration**: Provides RESTful API endpoints for interacting with multiple Lavalink instances.
@@ -46,14 +54,6 @@ Once the server is running, you can access the web interface by navigating to `h
 - Rest API: https://api.lavalink.rocks/v3
 - connections badge: ![V4 Badge](https://api.lavalink.rocks/v4/badge/connections)
 - connections badge: ![V3 Badge](https://api.lavalink.rocks/v3/badge/connections)
-
-## Notes
-
-- **User Friendliness**: Please note that this code is not particularly user-friendly and may be a bit messy. It's tailored to specific use cases and might require some tweaks depending on your environment and needs.
-  
-- **Personal Use**: I created this project for my specific use only. It's not particularly good, and it's not intended for general use. Please be aware that I'm just a beginner, so the code might not be up to professional standards.
-
-- **Configuration**: The Lavalink API settings and other configurations are centralized in the `config.js` file, making it easier to add or modify Lavalink instances.
 
 ## Contributing
 
