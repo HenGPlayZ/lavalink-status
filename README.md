@@ -42,8 +42,8 @@ Once the server is running, you can access the web interface by navigating to `h
 
 ## Preview
 - Web Interface: https://status.lavalink.rocks
-- https://api.lavalink.rocks/v4
-- https://api.lavalink.rocks/v3
+- Rest API: https://api.lavalink.rocks/v4
+- Rest API: https://api.lavalink.rocks/v3
 - connections badge: ![V4 Badge](https://api.lavalink.rocks/v4/badge/connections)
 - connections badge: ![V3 Badge](https://api.lavalink.rocks/v3/badge/connections)
 
