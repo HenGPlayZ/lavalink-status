@@ -123,7 +123,7 @@ app.get('/v4/badge/connections', async (req, res) => {
   }
 });
 
-const asciiArt = "© 2024 Horizxon Limited All rights reserved.";
+const trademark = "© 2024 Horizxon Limited All rights reserved.";
 // Endpoint for Lavalink v3
 app.get('/v3', async (req, res) => {
   try {
@@ -138,7 +138,7 @@ app.get('/v3', async (req, res) => {
         ...formatLavalinkStats(statsV3, isV3Online),
       },
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": asciiArt,   // Add ASCII art to the response
+      "HORIZXON": trademark,   // Add trademark to the response
     };
     res.json(response);
   } catch (error) {
@@ -162,7 +162,7 @@ app.get('/v4', async (req, res) => {
         ...formatLavalinkStats(statsV4, isV4Online),
       },
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": asciiArt,    // Add ASCII art to the response
+      "HORIZXON": trademark,    // Add trademark to the response
     };
     res.json(response);
   } catch (error) {
