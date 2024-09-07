@@ -70,8 +70,9 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       'https://status.lavalink.rocks',  // Existing domain
-      'https://api.lavalink.rocks' 
-     // Add additional domains as needed
+      'https://api.lavalink.rocks',  
+      'https://status.lavalink.rocks', // Add more domains here
+      'http://node.hengnation.eu:25566'     // Add additional domains as needed
     ];
 
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
@@ -88,6 +89,17 @@ app.use(cors(corsOptions));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Fetch plugins information from Lavalink server
+const fetchPluginsInfo = async (url, password) => {
+  try {
+    const response = await makeRestApiCallWithTimeout(url, { "Authorization": password }, API_TIMEOUT);
+    return response.plugins || [];
+  } catch (error) {
+    console.error(`Error fetching plugins info from ${url}: ${error.message}`);
+    return [];
+  }
+};
 
 // Endpoint for Lavalink v3 badge
 app.get('/v3/badge/connections', async (req, res) => {
@@ -123,13 +135,16 @@ app.get('/v4/badge/connections', async (req, res) => {
   }
 });
 
-const trademark = "© 2024 Horizxon Limited All rights reserved.";
+const asciiArt = "© 2024 Horizxon Limited All rights reserved.";
+
 // Endpoint for Lavalink v3
 app.get('/v3', async (req, res) => {
   try {
     const lavalinkV3Url = `${LAVALINK_V3.HOST}/stats`;
+    const infoUrl = `${LAVALINK_V3.HOST}/info`;
     console.log(`Fetching Lavalink v3 stats from ${lavalinkV3Url}`);
     const statsV3 = await makeRestApiCallWithTimeout(lavalinkV3Url, { "Authorization": LAVALINK_V3.PASSWORD }, API_TIMEOUT);
+    const plugins = await fetchPluginsInfo(infoUrl, LAVALINK_V3.PASSWORD);
     const isV3Online = lavalinkV3Status === 'online';
     const response = {
       "lavalinkv3": {
@@ -137,8 +152,9 @@ app.get('/v3', async (req, res) => {
         "online": isV3Online,
         ...formatLavalinkStats(statsV3, isV3Online),
       },
+      "plugins": plugins,
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": trademark,   // Add trademark to the response
+      "HORIZXON": asciiArt,   // Add ASCII art to the response
     };
     res.json(response);
   } catch (error) {
@@ -151,8 +167,10 @@ app.get('/v3', async (req, res) => {
 app.get('/v4', async (req, res) => {
   try {
     const lavalinkV4Url = `${LAVALINK_V4.HOST}/stats`;
+    const infoUrl = `${LAVALINK_V4.HOST}/info`;
     console.log(`Fetching Lavalink v4 stats from ${lavalinkV4Url}`);
     const statsV4 = await makeRestApiCallWithTimeout(lavalinkV4Url, { "Authorization": LAVALINK_V4.PASSWORD }, API_TIMEOUT);
+    const plugins = await fetchPluginsInfo(infoUrl, LAVALINK_V4.PASSWORD);
     const isV4Online = lavalinkV4Status === 'online';
     const response = {
       "lavalinkv4": {
@@ -161,8 +179,9 @@ app.get('/v4', async (req, res) => {
         "frameStats": isV4Online && statsV4 ? statsV4.frameStats : null,
         ...formatLavalinkStats(statsV4, isV4Online),
       },
+      "plugins": plugins,
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": trademark,    // Add trademark to the response
+      "HORIZXON": asciiArt,    // Add ASCII art to the response
     };
     res.json(response);
   } catch (error) {
