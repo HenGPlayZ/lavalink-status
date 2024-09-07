@@ -70,9 +70,8 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       'https://status.lavalink.rocks',  // Existing domain
-      'https://api.lavalink.rocks',  
-      'https://status.lavalink.rocks', // Add more domains here
-      'http://node.hengnation.eu:25566'     // Add additional domains as needed
+      'https://api.lavalink.rocks'  
+   // Add additional domains as needed
     ];
 
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
@@ -135,7 +134,7 @@ app.get('/v4/badge/connections', async (req, res) => {
   }
 });
 
-const asciiArt = "© 2024 Horizxon Limited All rights reserved.";
+const trademark = "© 2024 Horizxon Limited All rights reserved.";
 
 // Endpoint for Lavalink v3
 app.get('/v3', async (req, res) => {
@@ -154,7 +153,7 @@ app.get('/v3', async (req, res) => {
       },
       "plugins": plugins,
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": asciiArt,   // Add ASCII art to the response
+      "HORIZXON": trademark,   // Add trademark to the response
     };
     res.json(response);
   } catch (error) {
@@ -181,7 +180,7 @@ app.get('/v4', async (req, res) => {
       },
       "plugins": plugins,
       "clientIP": cleanIpAddress(getClientIp(req)),
-      "HORIZXON": asciiArt,    // Add ASCII art to the response
+      "HORIZXON": trademark,    // Add trademark to the response
     };
     res.json(response);
   } catch (error) {
