@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Space Mono', monospace; /* Clean, modern font */
+    font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #121212, #1e1e1e); /* Gradient background */
@@ -305,4 +305,108 @@ body.light-mode .route-item p {
 /* Ensure the links use the same color in both modes */
 body.light-mode .route-item a {
     color: #000000;
+}
+
+/* Plugins Section Styles */
+.plugins-info {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for plugins info */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.light-mode .plugins-info {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plugins-info h3 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    color: #ffffff; /* Ensures same color in both modes */
+    transition: color 0.3s;
+}
+
+body.light-mode .plugins-info h3 {
+    color: #000000; /* Light mode color */
+}
+
+.plugin {
+    margin-bottom: 10px;
+}
+
+.plugin p {
+    font-size: 18px;
+    color: #ffffff; /* Ensures same color in both modes */
+    transition: color 0.3s;
+}
+
+body.light-mode .plugin p {
+    color: #000000; /* Light mode color */
+}
+
+.plugin a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.plugin a:hover {
+    color: #d0d0d0;
+    text-decoration: underline;
+}
+
+body.light-mode .plugin a {
+    color: #000000;
+}
+
+/* Button Styles */
+button {
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0066cc;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Click-to-Toggle Styles */
+.toggle-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggle-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+.toggle-button.active {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.toggle-button.active + .toggle-content {
+    display: block;
 }
